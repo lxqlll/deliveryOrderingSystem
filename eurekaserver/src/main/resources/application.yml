@@ -1,0 +1,16 @@
+#指定端口
+server:
+  port: 8761
+#  servlet:
+    #path: /deliveryOrdering  #指定访问路径
+  tomcat:
+    uri-encoding: UTF-8 #tomcat处理乱码
+
+
+# 配置服务治理
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/ #注册路径
+    register-with-eureka: false #是否向服务注册中心注册自己
+    fetch-registry: false #是否检索服务
